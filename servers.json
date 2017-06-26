@@ -1,14 +1,110 @@
 [
 	{
-		"name": "Hypixel",
-		"ip": "mc.hypixel.net",
+		"name": "Mine Your Mind",
+		"ip": "hub.mineyourmind.net",
 		"type": "PC",
-		"category": "minigames"
+		"category": "modded"
 	},
 	{
-		"name": "HiveMC",
-		"ip": "play.hivemc.com",
+		"name": "The Node Mc",
+		"ip": "sf3.thenodemc.com",
 		"type": "PC",
-		"category": "minigames"
+		"category": "modded"
+	},
+	{
+		"name": "My FTB",
+		"ip": "feedthebeast.myftb.de",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Toasty Networks",
+		"ip": "play.toastynetworks.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Kooky Kraft MC",
+		"ip": "play.kookykraftmc.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Baco Networks",
+		"ip": "play.baconetworks.com",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Mod Realms",
+		"ip": "play.modrealms.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Shadow Node",
+		"ip": "play.shadownode.ca",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Frozen Soul",
+		"ip": "frozensoul.co",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Brierie",
+		"ip": "lobby.brierie.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "DeVco",
+		"ip": "play.devcoftb.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "MinePow",
+		"ip": "sf25.minepow.com",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Golden Sands",
+		"ip": "play.goldensandsmc.com",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Kingdoms City",
+		"ip": "hub.KingdomsCity.com",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Lolnet",
+		"ip": "hub.lolnet.co.nz",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "MineAurion",
+		"ip": "play.mineaurion.com",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Mook Network",
+		"ip": "inf.mooknetwork.com",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Riks Realm",
+		"ip": "riksrealm.com",
+		"type": "PC",
+		"category": "modded"
 	}
 ]
