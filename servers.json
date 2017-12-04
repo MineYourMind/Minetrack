@@ -106,5 +106,29 @@
 		"ip": "riksrealm.com",
 		"type": "PC",
 		"category": "modded"
+	},
+	{
+		"name": "Ender Effect",
+		"ip": "145.239.130.229",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "craftersland",
+		"ip": "inf.craftersland.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Grumpy Craft",
+		"ip": "hub.grumpycraft.com",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "Mine Wonder Land",
+		"ip": "play.minewonderland.net",
+		"type": "PC",
+		"category": "modded"
 	}
 ]
