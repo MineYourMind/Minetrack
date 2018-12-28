@@ -275,10 +275,10 @@ if (config.logToDatabase) {
 
 		for (var i = 0; i < servers.length; i++) {
 			(function(server) {
-				db.getTotalRecord(server.ip, function(record) {
+				db.getTotalRecord(server.ip, 7, function(record) {
 					logger.log('info', 'Completed query for %s', server.ip);
 
-					highestPlayerCount[server.ip] = record;
+					highestPlayerCount[server.ip] = record || 0;
 
 					completedQueries += 1;
 

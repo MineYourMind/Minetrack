@@ -7,7 +7,7 @@
 	},
 	{
 		"name": "The Node Mc",
-		"ip": "sf3.thenodemc.com",
+		"ip": "play.thenodemc.com",
 		"type": "PC",
 		"category": "modded"
 	},
@@ -24,8 +24,8 @@
 		"category": "modded"
 	},
 	{
-		"name": "Kooky Kraft MC",
-		"ip": "play.kookykraftmc.net",
+		"name": "Nytro - Kooky Kraft MC",
+		"ip": "play.nytro.network",
 		"type": "PC",
 		"category": "modded"
 	},
@@ -128,6 +128,24 @@
 	{
 		"name": "Mine Wonder Land",
 		"ip": "play.minewonderland.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "DirtCraft",
+		"ip": "hub.dirtcraft.net",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "BedCraft",
+		"ip": "ftb.bedcraft.eu",
+		"type": "PC",
+		"category": "modded"
+	},
+	{
+		"name": "YCC Network",
+		"ip": "play.yesdog.us",
 		"type": "PC",
 		"category": "modded"
 	}
