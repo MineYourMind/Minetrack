@@ -20,6 +20,7 @@ var networkVersions = [];
 
 var graphData = [];
 var highestPlayerCount = {};
+var averagePlayerCount = {};
 var lastGraphPush = [];
 
 function pingAll() {
@@ -99,7 +100,8 @@ function handlePing(network, res, err, attemptedVersion) {
 			type: network.type
 		},
 		versions: _networkVersions,
-		record: highestPlayerCount[network.ip]
+		record: highestPlayerCount[network.ip],
+		average: averagePlayerCount[network.ip]
 	};
 
 	if (res) {
@@ -109,6 +111,10 @@ function handlePing(network, res, err, attemptedVersion) {
 		// will create a record that's only valid for the runtime duration.
 		if (config.logToDatabase && res.players.online > highestPlayerCount[network.ip]) {
 			highestPlayerCount[network.ip] = res.players.online;
+		}
+		if (config.logToDatabase && res.players.online) {
+			averagePlayerCount[network.ip].players += res.players.online;
+			averagePlayerCount[network.ip].count++;
 		}
 	} else if (err) {
 		networkSnapshot.error = err;
@@ -275,14 +281,28 @@ if (config.logToDatabase) {
 
 		for (var i = 0; i < servers.length; i++) {
 			(function(server) {
-				db.getTotalRecord(server.ip, 7, function(record) {
-					logger.log('info', 'Completed query for %s', server.ip);
+				const days = 7;
+				const startRecord = new Date();
+				db.getTotalRecord(server.ip, days, function(record) {
+					logger.log('info', 'Completed total recored query for %s in %s ms', server.ip, new Date() - startRecord);
 
 					highestPlayerCount[server.ip] = record || 0;
 
 					completedQueries += 1;
 
-					if (completedQueries === servers.length) {
+					if (completedQueries / 2 === servers.length) {
+						startServices();
+					}
+				});
+				const startAverage = new Date();
+				db.getAveragePlayers(server.ip, days, function(avgPlayers) {
+					logger.log('info', 'Completed average players query for %s in %s ms', server.ip, new Date() - startAverage);
+
+					averagePlayerCount[server.ip] = avgPlayers || {players: 0, count: 0};
+
+					completedQueries += 1;
+
+					if (completedQueries / 2 === servers.length) {
 						startServices();
 					}
 				});

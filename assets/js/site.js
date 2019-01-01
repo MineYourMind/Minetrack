@@ -74,7 +74,10 @@ function updateServerStatus(lastEntry) {
     $("#stat_networks").text(formatNumber(keys.length));
 
     if (lastEntry.record) {
-        $('#record_' + safeName(info.name)).html('Record: ' + formatNumber(lastEntry.record));
+        $('#record_' + safeName(info.name)).html('Record: ' + formatNumber(lastEntry.record)) + ', ';
+    }
+    if (lastEntry.average) {
+        $('#average_' + safeName(info.name)).html('Average: ' + formatNumber((lastEntry.average.players / lastEntry.average.count).toFixed(0)));
     }
 
     updatePercentageBar();
@@ -420,7 +423,8 @@ $(document).ready(function() {
                             <h3>' + info.name + '&nbsp;' + typeString + '</h3>\
                             <span id="status_' + safeNameCopy + '">Waiting</span>\
                             <div id="version_' + safeNameCopy + '" class="color-dark-gray server-meta versions"><span class="version"></span></div>\
-                            <span id="record_' + safeNameCopy + '" class="color-dark-gray server-meta"></span>\
+                            <span id="record_' + safeNameCopy + '" class="color-dark-gray server-meta"></span> \
+                            <span id="average_' + safeNameCopy + '" class="color-dark-gray server-meta"></span>\
                         </div>\
                         <div class="column" style="float: right;">\
                             <div class="chart" id="chart_' + safeNameCopy + '"></div>\
